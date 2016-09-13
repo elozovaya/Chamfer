@@ -8,11 +8,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Questrial|Quicksand:400,700" rel="stylesheet"> 
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link href="css/select2.min.css" rel="stylesheet"/>
 	<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+<!-- <img class="pp" src="pp.jpg"></img> -->
 	<header class="header navbar navbar-fixed-top">
-		<div class="container">
+		<div class="container shadow">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><img src="images/logo.png" height="26" width="149" alt="" class="logo"></a>
 			</div>
@@ -20,7 +22,7 @@
 				<ul class="nav navbar-nav navbar-right main-nav hidden-xs">
 					<li role="presentation" class="active"><a href="#">Home</a></li>
 					<li role="presentation"><a href="#">About</a></li>
-					<li role="presentation"><a href="#">Portfolio</a></li>
+					<li rolebn="presentation"><a href="#">Portfolio</a></li>
 					<li role="presentation"><a href="#">TestiMOnials</a></li>
 					<li role="presentation"><a href="#">Contact</a></li>
 				</ul>
@@ -29,22 +31,22 @@
 	</header>
 
 	<section class="promo">
-		<div class="container">
+		<div class="container shadow">
 			<div class="row">
-				<div class="col-sm-push-7 col-sm-5">
+				<div class="col-md-push-7 col-md-5">
 					<div class="promo-right">
 						<div class="ava">
 							<img src="images/ava.jpg" class="img-circle img-responsive" alt="">
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-pull-5 col-sm-7 text-center">
+				<div class="col-md-pull-5 col-md-7 text-center">
 					<div class="promo-left">
 						<h1>Jonathan Doestwood</h1>
 						<span class="proffesion"><span class="proffesion__decor">web designer & online enterpreniour</span></span>
 						<div class="text-center">
 							<a href="" class="btn btn-danger">Hire me now</a>
-							<a href="" class="btn btn-success">Hire me now</a>
+							<a href="" class="btn btn-success">Portfolio</a>
 					</div>
 					</div>
 				</div>
@@ -53,29 +55,9 @@
 	</section>
 
 	<section class="about">
-		<div class="container">
+		<div class="container shadow">
 			<div class="row">
-				<div class="col-sm-5">
-					<div class="about-left">
-						<h2 class="h1">Expirience</h2>
-						<div class="item">
-							<span class="period">2011 - current</span>
-							<span class="position">Senior Web Designer - MyCompany</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
-						</div>
-						<div class="item">
-							<span class="period">2010 - 2011</span>
-							<span class="position">Junior Web Designer - FirstCompany</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
-						</div>
-						<div class="item">
-							<span class="period">2007 - 2010</span>
-							<span class="position">Web Designer - Freelance</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-7">
+				<div class="col-md-push-5 col-md-7">
 					<div class="about-right">
 						<h2 class="h1">Skills</h2>
 						<div class="skill clearfix">
@@ -134,46 +116,74 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-pull-7 col-md-5">
+					<div class="about-left">
+						<h2 class="h1">Expirience</h2>
+						<div class="item">
+							<span class="period">2011 - current</span>
+							<span class="position">Senior Web Designer - MyCompany</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
+						</div>
+						<div class="item">
+							<span class="period">2010 - 2011</span>
+							<span class="position">Junior Web Designer - FirstCompany</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
+						</div>
+						<div class="item">
+							<span class="period">2007 - 2010</span>
+							<span class="position">Web Designer - Freelance</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis, purus ac pharetra dapibus, lacus leo accumsan risus, id faucibus augue nisi vitae mi.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<section class="portfolio">
-		<div class="container">
+		<div class="container shadow">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-md-4">
 					<div class="portfolio-left">
 						<h2 class="h1">Portfolio</h2>
-						<ul class="nav nav-pills nav-stacked sidebar">
-							<li class="active"><a href="#">Show all</a></li>
-							<li><a href="#">Web design</a></li>
-							<li><a href="#">Graphic design</a></li>
-							<li><a href="#">Branding</a></li>
-							<li><a href="#">3D models</a></li>
-							<li><a href="#">Illustration</a></li>
-							<li><a href="#">Photography</a></li>
-						</ul>
+						<div id="portfolio-sidebar">
+							<ul class="nav nav-pills nav-stacked sidebar hidden-xs">
+								<li class="active"><a href="#">Show all</a></li>
+								<li><a href="#">Web design</a></li>
+								<li><a href="#">Graphic design</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">3D models</a></li>
+								<li><a href="#">Illustration</a></li>
+								<li><a href="#">Photography</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col-sm-8">
+				<div class="col-md-8">
 					<div class="portfolio-right">
 						<div class="row">
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-01.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-01.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Kamila</span></span>
 									<span class="portfolio__skill">web design</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-02.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-02.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Loopy</span></span>
 									<span class="portfolio__skill">branding</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-03.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-03.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">NatWest</span></span>
 									<span class="portfolio__skill">web design</span>
 								</div>
@@ -182,21 +192,27 @@
 						<div class="row">
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-04.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-04.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Netwaqua</span></span>
 									<span class="portfolio__skill">graphic design</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-05.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-05.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Bakers</span></span>
 									<span class="portfolio__skill">illustration</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-06.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-06.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Hello</span></span>
 									<span class="portfolio__skill">branding</span>
 								</div>
@@ -205,21 +221,27 @@
 						<div class="row">
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-07.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-07.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Burton</span></span>
 									<span class="portfolio__skill">branding</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-08.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-08.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">The Bricks</span></span>
 									<span class="portfolio__skill">web design</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-09.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-09.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Craft</span></span>
 									<span class="portfolio__skill">branding</span>
 								</div>
@@ -228,21 +250,27 @@
 						<div class="row">
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-10.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-10.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">UltraBook</span></span>
 									<span class="portfolio__skill">3d models</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-11.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-11.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">John Doe</span></span>
 									<span class="portfolio__skill">web design</span>
 								</div>
 							</div>
 							<div class="col-sm-4 text-center">
 								<div class="portfolio__item">
-									<img class="portfolio__img img-responsive" src="images/portfolio-12.jpg" alt="">
+									<div class="portfolio__img">
+										<img src="images/portfolio-12.jpg" alt="">
+									</div>
 									<span class="portfolio__name"><span class="portfolio__decor">Regenair</span></span>
 									<span class="portfolio__skill">branding</span>
 								</div>
@@ -254,57 +282,113 @@
 		</div>
 	</section>
 	<section class="testimonials">
-		<div class="container">
-			<div class="carousel">
+		<div class="container shadow">
+			<div class="holder">
 				<h2 class="h1">Testimonials</h2>
-				<div class="slide">
-					<div class="slide-holder">
-						<p>I think designers can create normalcy out of chaos; they can clearly communicate ideas through the organising. Lorem ipsum dolor sit amet and someone else.</p>
-						<p>I think designers can create normalcy out of chaos.</p>
-						<span class="autor">Mark Knauman</span>
+				<div class="carousel">
+					<div class="slide">
+						<div class="slide-holder">
+							<div class="recall">
+								<p>I think designers can create normalcy out of chaos; they can clearly communicate ideas through the organising. Lorem ipsum dolor sit amet and someone else.</p>
+								<p>I think designers can create normalcy out of chaos.</p>
+								<span class="autor">Mark Knauman</span>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-holder">
-						<h4>Рекламная полиграфия</h4>
-						<a href="#" class="more">узнать больше</a>
+					<div class="slide">
+						<div class="slide-holder">
+							<div class="recall">
+								<p>I think designers can create normalcy out of chaos; they can clearly communicate ideas through the organising. Lorem ipsum dolor sit amet and someone else.</p>
+								<span class="autor">Joe Doe</span><h4>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="testimonials-left">
-						<h2 class="h1">Testimonials</h2>
+					<div class="slide">
+						<div class="slide-holder">
+							<div class="recall">
+								<p>I think designers can create normalcy out of chaos; they can clearly communicate ideas through the organising. Lorem ipsum dolor sit amet and someone else.</p>
+								<span class="autor">Joe Doe</span><h4>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="testimonials-right">
-						
+					<div class="slide">
+						<div class="slide-holder">
+							<div class="recall">
+								<p>I think designers can create normalcy out of chaos; they can clearly communicate ideas through the organising. Lorem ipsum dolor sit amet and someone else.</p>
+								<span class="autor">Joe Doe</span><h4>
+													</div>
+							</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="contact">
-		<div class="container">
+		<div class="container shadow">
 			<div class="row">
-				<div class="col-sm-5">
+				<div class="col-md-5 col-sm-6">
 					<div class="contact-left">
 						<h2 class="h1">Contact</h2>
-
+						<form role="form" class="form">
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" placeholder="Name...">
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" id="email" placeholder="Email...">
+							</div>
+							<div class="form-group">
+								<textarea name="message" id="message" class="form-control" cols="30" rows="8" placeholder="Message..."></textarea>
+							</div>
+							<button type="submit" class="btn btn-form">Submit</button>
+						</form>
 					</div>
 				</div>
-				<div class="col-sm-7">
+				<div class="col-md-7 col-sm-6">
 					<div class="contact-right">
-						
+						<div class="map-holder">
+							<div class="map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.8278389587467!2d151.20786561566686!3d-33.94555583047892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b11355a8494d%3A0x6985922796e5b04e!2zNiBTcHJpbmcgU3QsIFBhZ2V3b29kIE5TVyAyMDM1LCDQkNCy0YHRgtGA0LDQu9C40Y8!5e0!3m2!1sru!2sua!4v1472826281845" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="contact-info">
+							<div class="row">
+								<div class="col-md-7 col-sm-12">
+									<dl>
+										<dt>Email:</dt>
+										<dd>
+											<a href="#">info@jonathandoestwood.com</a>
+										</dd>
+										<dt>Phone:</dt>
+										<dd>+123 456 789 222</dd>
+										<dt>Website:</dt>
+										<dd>
+											<a href="#">http://jonathandoestwood.com</a>
+										</dd>
+									</dl>
+								</div>
+								<div class="col-md-5 col-sm-12">
+									<dl>
+										<dt>Zip:</dt>
+										<dd>NJ, 89101</dd>
+										<dt>Street:</dt>
+										<dd>723 Broome Ave</dd>
+										<dt>Office:</dt>
+										<dd>2nd Floor, 44</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js">
+	</script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<!-- <script src="js/jquery.main.js"></script> -->
 </body>
 </html>
